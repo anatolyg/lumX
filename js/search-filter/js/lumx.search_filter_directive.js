@@ -11,15 +11,7 @@ angular.module('lumx.search-filter', [])
             scope: {
                 model: '=?'
             },
-            controller:['$scope', function ($scope) {
-                this.publishOpen = function () {
-                    $scope.$emit('lxSearchFilter:open');
-                };
-                this.publishClose = function () {
-                    $scope.$emit('lxSearchFilter:closed');
-                };
-            }],
-            link: function(scope, element, attrs, ctrl)
+            link: function(scope, element, attrs)
             {
                 var $input = element.find('.search-filter__input'),
                     $label = element.find('.search-filter__label'),
@@ -68,10 +60,7 @@ angular.module('lumx.search-filter', [])
                             }, {
                                 duration: 400,
                                 easing: 'easeOutQuint',
-                                queue: false,
-                                complete: function (els) {
-                                    ctrl.publishClose();
-                                }
+                                queue: false
                             });
                         }
                     });
@@ -85,10 +74,7 @@ angular.module('lumx.search-filter', [])
                         }, {
                             duration: 400,
                             easing: 'easeOutQuint',
-                            queue: false,
-                            begin: function (els) {
-                                ctrl.publishOpen();
-                            }
+                            queue: false
                         });
 
                         $timeout(function()
