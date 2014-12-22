@@ -87,6 +87,9 @@ app.config(function($locationProvider, $routeProvider)
         when('/directives/dialogs', {
             templateUrl: '/demo/includes/directives/dialogs.html'
         }).
+        when('/directives/date-picker', {
+            templateUrl: '/demo/includes/directives/date-picker.html'
+        }).
         when('/directives/thumbnails', {
             templateUrl: '/demo/includes/directives/thumbnails.html'
         }).
@@ -152,7 +155,7 @@ app.controller('AppController',
     $scope.ajax = {
         selected: 'Inception',
         list: [],
-        update: function(newFilter, oldFilter)
+        update: function(newFilter)
         {
             if (newFilter)
             {
@@ -215,8 +218,10 @@ app.controller('AppController',
         }
     };
 
-    $scope.selectedPerson = undefined;
-    $scope.selectedPersons = [$scope.people[2], $scope.people[4]];
+    $scope.selects = {
+        selectedPerson: undefined,
+        selectedPersons: [$scope.people[2], $scope.people[4]]
+    };
 
     $scope.tree = [
     {
@@ -317,4 +322,34 @@ app.controller('AppController',
     {
         console.log("Filter changed: '" + newVal + "' from '" + oldVal + "'");
     });
+
+    $scope.datepicker = {
+        date: new Date()
+    };
+
+    var tabIndex = 4;
+    $scope.tabs = [
+        { heading: 'Tab 1', content: 'Tab 1 content' },
+        { heading: 'Tab 2', content: 'Tab 2 content' },
+        { heading: 'Tab 3', content: 'Tab 3 content' }
+    ];
+
+    $scope.addTab = function()
+    {
+        $scope.tabs.push({ heading: 'Tab ' + tabIndex, content: 'Tab ' + tabIndex + ' content' });
+        ++tabIndex;
+    };
+
+    $scope.removeFirstTab = function()
+    {
+        $scope.removeTab(0);
+    };
+
+    $scope.removeTab = function(idx)
+    {
+        if ($scope.tabs.length > idx)
+        {
+            $scope.tabs.splice(idx, 1);
+        }
+    };
 });

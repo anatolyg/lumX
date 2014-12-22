@@ -1,5 +1,81 @@
 # Changelog
 
+## v0.2.27:
+
+#### Bug fixes:
+ - tabs: manage dynamic add/remove & ng-repeat
+ - date-picker: improve security by removing scope binding
+ - date-picker: move isDefined checking to controller
+ - date-picker: watch the scope to handle async binding
+
+
+## v0.2.26:
+
+#### Bug fixes:
+ - selects: add default scope values
+
+
+## v0.2.25:
+
+#### Bug fixes:
+ - dropdown: remove element on scope destroy
+ - tooltip: remove element on scope destroy
+ - selects: use child scope inside the directive
+
+#### Breaking changes:
+ - selects now use "ng-model" instead of "model"
+
+
+## v0.2.24:
+
+#### Bug fixes:
+ - select: better default value management
+
+
+## v0.2.23:
+
+#### New features:
+ - scrollbar: Observe id to handle dynamics variables
+ - scrollbar: Create getter & setter to watch scroll percentage
+
+#### Bug fixes:
+ - notification: show alert and confirm boxes
+
+
+## v0.2.22:
+
+#### New features:
+ - date picker: add label attribute
+ - date picker: add date picker component
+
+#### Bug fixes:
+ - date picker: use moment local locale
+ - file-input: add a display block to filename
+
+
+## v0.2.21:
+
+#### Bug fixes:
+ - transclude: add array injection
+ - text fields: watch input $modelValue
+ - search filter: cancel button line height
+ - buttons: disabled style
+
+
+## v0.2.20:
+
+#### Bug fixes:
+ - tabs: better scope management in transclude
+ - tabs: update heading when scope changes
+ - dialog: emergence animation is now stable
+
+
+## v0.2.19:
+
+#### Bug fixes:
+ - select: move scope init data
+
+
 ## v0.2.18:
 
 #### Bug fixes:
@@ -8,7 +84,7 @@
 
 ## v0.2.17:
 
-#### New fetures:
+#### New features:
  - typography: line height and letter spacing
  - tabs: add responsive behavior
  - tabs: add layout attribute
@@ -48,7 +124,7 @@
 
 ## v0.2.13:
 
-#### New fetures:
+#### New features:
  - transclude: add iterative parent option
 
 #### Bug fixes:
@@ -57,7 +133,7 @@
 
 ## v0.2.12:
 
-#### New fetures:
+#### New features:
  - text-fields: fixing padding
  - text-fields: add textarea in text fields components
 
@@ -68,7 +144,7 @@
 
 ## v0.2.11:
 
-#### New fetures:
+#### New features:
  - selects: converter model=>items & vice versa
 
 #### Bug fixes:
@@ -106,7 +182,7 @@
 
 ## v0.2.7:
 
-#### New fetures:
+#### New features:
  - search filter: add width and position attrs
 
 #### Bug fixes:
@@ -115,7 +191,7 @@
 
 ## v0.2.6:
 
-#### New fetures:
+#### New features:
  - tabs: tabs can have a shadow
  - tabs: remove padding on .tabs__panes
  - dialogs: add responsive behaviour for dialogs
@@ -148,7 +224,7 @@
 
 ## v0.2.2:
 
-#### New fetures:
+#### New features:
  - tabs: add links background color
  - tabs: custom colors for tabs
  - tabs: icons in tabs links
@@ -163,13 +239,13 @@
 
 ## v0.2.1:
 
-#### New fetures:
+#### New features:
  - colors: rename black and white classes
 
 
 ## v0.2.0:
 
-#### New fetures:
+#### New features:
  - search-filter: add model management
  - select: remove delete button from multiple tag
  - select: deselection on non-multiple selects
@@ -196,7 +272,7 @@
 
 ## v0.1.14:
 
-#### New fetures:
+#### New features:
  - tabs: change default theme and parameter name
  - tabs: add scope variables and dark/light theme
  - tabs: add color themes
@@ -222,7 +298,7 @@
 
 ## v0.1.12:
 
-#### New fetures:
+#### New features:
  - search-filter: better click handlers
  - search-filter: ergonomic improvements
  - search-filter: create search filter component
@@ -253,7 +329,7 @@
 
 ## v0.1.8:
 
-#### New fetures:
+#### New features:
  - toolbars: add toolbar component
 
 #### Bug fixes:
@@ -263,7 +339,7 @@
 
 ## v0.1.7:
 
-#### New fetures:
+#### New features:
  - colors: add new colors to default settings
  - colors: Material design color palette with Sass
 
@@ -278,7 +354,7 @@
 
 ## v0.1.4:
 
-#### New fetures:
+#### New features:
  - progress: create service to manage progress
  - progress: enhance existing circular progress
 

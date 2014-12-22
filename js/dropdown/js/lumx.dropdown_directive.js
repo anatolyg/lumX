@@ -231,7 +231,8 @@ angular.module('lumx.dropdown', [])
 
         $scope.$on('$destroy', function()
         {
-            $scope.$destroy();
+            dropdownMenu.remove();
+            LxDropdownService.close($scope);
         });
     }])
     .directive('lxDropdown', function()
